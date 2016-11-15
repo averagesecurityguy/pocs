@@ -44,8 +44,8 @@ def check_number(number):
     urls = content.get('onload')
     if urls is None:
         return None
-
-    return [u[24:].replace('\\', '').replace('"', '') for u in urls]
+    else:
+        return [u[24:].replace('\\', '').replace('"', '') for u in urls]
 
 
 # Get the user account information from the URL.
